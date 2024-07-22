@@ -12,28 +12,37 @@
 * [Project Developers](#project-developers)
 
 ## Project Description
-Here's a simple page simulating a musical keyboard with sounds for clicks and on-page interaction.
+AluraMidi is a digital soundboard that simulates a musical keyboard, designed using HTML, CSS, and JavaScript. This innovative project allows users to play various drum kit sounds by interacting with a grid of buttons. Each button on the 3x3 grid represents a different drum sound, such as a snare, cymbal, or bass, providing an intuitive and fun way to create rhythm patterns directly from your web browser.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 ## Features and Application Demonstration
-- `Feature 1`: Upon opening the page, click on the keyboard buttons, where different sounds have been added for each of them using JavaScript, and you will hear the corresponding sound for each key.
+- **Interactive Soundboard**: Features a 3x3 grid of buttons, each mapped to a unique drum sound. Users can click these buttons to play sounds, simulating the experience of playing a drum kit.
+- **Responsive Design**: The layout is responsive, ensuring that users can interact with the musical grid on any device, from desktops to mobile phones.
+- **Real-time Audio Playback**: Sounds are played instantly when the buttons are pressed, mimicking the real-time feedback expected from a physical instrument.
+- **User-friendly Interface**: The interface is simple and intuitive, making it easy for users of all ages and skill levels to interact with and enjoy making music.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Access
-Project requirements:
- - Have your preferred IDE installed on your computer.
 
-Access the project hosted [here](https://alura-midi-sigma-sable.vercel.app) and have fun:
- - Project hosted on Vercel.
- - Easy implementation, [click](https://alura-midi-sigma-sable.vercel.app) and enter the project, try it out easily and quickly without needing to download the files to your own computer.
+### Prerequisites
+- **Integrated Development Environment (IDE)**: While not required for accessing the hosted version, an IDE like Visual Studio Code is recommended if you plan to modify or further develop the project locally.
 
-Have the code on your computer:
- - Access the project source code [here](https://github.com/victorhubarb/alura-midi) or download the project [here](https://github.com/victorhubarb/alura-midi/archive/refs/heads/main.zip). After one of these steps, and also unzip it on your computer in case of download, open the project in your preferred IDE.
+### Online Access
+- **Live Demo**: Experience AluraMidi directly through its hosted version on Vercel:
+  - [Visit AluraMidi](https://alura-midi-sigma-sable.vercel.app) to explore the interactive musical grid and play sounds instantly without any setup.
 
-Clone repository with the following steps:
- 1. Open the terminal
- 2. git clone https://github.com/victorhubarb/alura-midi.git
- 3. Press ENTER to create your clone
+### Local Setup
+- **Access and Download the Source Code**:
+  - View the [AluraMidi GitHub repository](https://github.com/victorhubarb/alura-midi) to access the source code.
+  - To download the project directly, [click here](https://github.com/victorhubarb/alura-midi/archive/refs/heads/main.zip), unzip the file after download, and open it in your IDE.
+
+- **Clone the Repository**:
+  ```bash
+  # Open your terminal
+  git clone https://github.com/victorhubarb/alura-midi.git
+  cd alura-midi
+  
+  # Now you are ready to work on the project locally.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Technologies Used
