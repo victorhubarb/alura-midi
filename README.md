@@ -1,45 +1,42 @@
-# Alura MIDI <a name="readme-top"></a>
-![Static Badge](https://img.shields.io/badge/status-completed-green?style=for-the-badge)
+# MIDI Drum Pad
 
-## Introduction
-**Alura MIDI** is an interactive sound application, simulating a musical keyboard. The project was developed with HTML, CSS, and JavaScript, allowing users to play different percussion instrument sounds by interacting with buttons on the page.
+A 3×3 pad of percussion sounds that runs in the browser. Click a pad, or Tab to it and press Space or Enter, and it plays a short drum sample. It is built with HTML, CSS and a small amount of JavaScript, and it has no libraries.
 
-## Live Application
-[Alura MIDI Demonstration](https://alura-midi-sigma-sable.vercel.app)
+**Live demo:** [alura-midi-sigma-sable.vercel.app](https://alura-midi-sigma-sable.vercel.app)
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Contributors](#contributors)
+## How it works
 
-## Installation
+- Each pad is a `<button class="tecla tecla_pom">` (the second class names the instrument), and each sound is an `<audio>` element with a matching id.
+- `main.js` loops over the pads once, builds the id of the matching audio element from the pad's class name, and sets the click handler. `tocaSom()` checks that the element exists and really is an `<audio>` before calling `play()`.
+- Pressing Space or Enter on a focused pad adds an `ativa` class, which gives the visual "pressed" state. It is removed on key release.
+- The pads sit in a CSS Grid with three equal columns (`repeat(3, 1fr)`).
 
-### Prerequisites
-- A web browser
+The pad labels (Pom, Clap, Tim, Puff, Splash, Toim, Psh, Tic, Tom) are in Portuguese.
 
-### Steps to run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/victorhubarb/alura-midi.git
-   cd alura-midi
-   ```
-2. Open the `index.html` file in your browser to view and interact with the page.
+## Run it
 
-## Usage
-**Alura MIDI** allows the user to interact with a grid of buttons that represent different percussion instrument sounds. By clicking the buttons, the user can play sounds in real-time, creating beats and rhythms.
+No build step and no dependencies. Clone the repo and open `index.html` in a browser.
 
-## Features
-- **Sound Grid**: Each button in the grid is mapped to a specific instrument sound.
-- **Real-Time Audio Playback**: Sounds play immediately when you click the buttons.
-- **Responsive Design**: The layout adapts to different devices, such as desktop and mobile.
+```bash
+git clone https://github.com/victorhubarb/alura-midi.git
+cd alura-midi
+```
 
-## Technologies
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+## Project structure
 
-## Contributors
-- [Victor Barbosa](https://github.com/victorhubarb)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```
+index.html   Pads and audio elements
+main.js      Click and keyboard handling
+css/         reset.css, estilos.css
+sounds/      Nine .wav samples
+```
+
+## Known gaps
+
+- Hitting the same pad again while its sound is still playing does nothing, because `play()` does not restart a sample that is already running. Setting `currentTime = 0` first would fix it.
+- The sound files are named after the keys Q, W, E, A, S, D, Z, X and C, but those keys are not mapped yet. Only the mouse and the focused Space or Enter keys work.
+- There are no media queries, so the layout is made for larger screens.
+
+---
+
+Victor Hugo Barbosa · [GitHub](https://github.com/victorhubarb) · [LinkedIn](https://www.linkedin.com/in/victorhbarbosa/)
